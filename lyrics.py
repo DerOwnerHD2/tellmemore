@@ -20,7 +20,7 @@ def parse_lrc():
 
 def add_lyrics_to_mp3(job_id):
     lyrics = parse_lrc()
-    audio = mutagen.File(f"downloads/{job_id}.pre.mp3", easy=False)
+    audio = mutagen.File("downloads/" + job_id + ".pre.mp3", easy=False)
     
     if audio.tags is None:
         audio.add_tags()
