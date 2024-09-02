@@ -35,7 +35,7 @@ def add_lyrics_to_mp3(job_id):
     audio.tags.add(sylt)
     audio.save()
 
-    os.remove(lrc_file)
+    os.remove("lyrics.lrc")
 
 if __name__ == "__main__":
     import sys
