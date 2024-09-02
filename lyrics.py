@@ -7,7 +7,7 @@ def parse_lrc():
     lyrics = []
     time_pattern = re.compile(r"\[(\d+):(\d+)\.(\d+)\]")
     
-    with open("lyrics.lrc", "r", encoding="utf-8") as file:
+    with open("lyrics.lrc", "r") as file:
         for line in file:
             match = time_pattern.match(line)
             if match:
